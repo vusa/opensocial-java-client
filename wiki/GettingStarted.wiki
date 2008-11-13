@@ -1,0 +1,7 @@
+#summary Introduction to the Java Client Library
+#labels Featured
+
+= Getting started with the Java Client Library =
+
+== List of restful endpoints you can use to test the library ==
+  * http://sandbox.orkut.com/social/rest
