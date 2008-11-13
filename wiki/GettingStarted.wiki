@@ -5,3 +5,43 @@
 
 == List of restful endpoints you can use to test the library ==
   * http://sandbox.orkut.com/social/rest
+
+== Sample code ==
+{{{
+import java.util.Collection;
+
+import org.opensocial.data.*;
+import org.opensocial.client.*;
+
+public class Main {
+
+  /**
+   * @param args
+   */
+  public static void main(String[] args) {
+    OpenSocialClient c = new OpenSocialClient();
+    c.setProperty(OpenSocialClient.Property.RESTFUL_BASE_URI, "http://sandbox.orkut.com/social/rest/");
+    c.setProperty(OpenSocialClient.Property.TOKEN, <ORKUT_TOKEN>);
+
+
+    try {
+      OpenSocialPerson p = c.fetchPerson("01495306580392390900");
+      OpenSocialField f = p.getField("thumbnailUrl");
+      System.out.println(f.getStringValue());
+
+      Collection<OpenSocialPerson> friends = c.fetchFriends("01495306580392390900");
+      for (OpenSocialPerson friend : friends) {
+        System.out.println(friend.getDisplayName());
+      }
+
+      OpenSocialObject o = c.fetchPersonAppData("01495306580392390900", "291092957065");
+      System.out.println(o.getField("test").getStringValue());
+
+    } catch (Exception e) {
+
+    }
+  }
+
+}
+
+}}}
