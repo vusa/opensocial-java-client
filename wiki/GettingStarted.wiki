@@ -3,9 +3,10 @@
 
 = Getting started with the Java Client Library =
 
-== List of restful endpoints you can use to test the library ==
+== List of endpoints you can use to test the library ==
   * http://sandbox.orkut.com/social/rest/
   * http://sandbox.orkut.com/social/rpc/
+  * http://api.myspace.com/v2/
 
 == Sample code ==
 {{{
@@ -20,23 +21,23 @@ public class Main {
    * @param args
    */
   public static void main(String[] args) {
-    OpenSocialClient c = new OpenSocialClient();
-    c.setProperty(OpenSocialClient.Property.RESTFUL_BASE_URI, "http://sandbox.orkut.com/social/rest/");
-    c.setProperty(OpenSocialClient.Property.TOKEN, <ORKUT_TOKEN>);
+    OpenSocialClient c = new OpenSocialClient("myspace.com");
+
+    c.setProperty(OpenSocialClient.Properties.REST_BASE_URI, "http://api.myspace.com/v2/");
+    c.setProperty(OpenSocialClient.Properties.CONSUMER_SECRET, <MYSPACE_SECRET>);
+    c.setProperty(OpenSocialClient.Properties.CONSUMER_KEY, <MYSPACE_APP_KEY>);
+    c.setProperty(OpenSocialClient.Properties.VIEWER_ID, <YOUR_MYSPACE_ID>);
 
 
     try {
-      OpenSocialPerson p = c.fetchPerson("01495306580392390900");
+      OpenSocialPerson p = c.fetchPerson(<YOUR_MYSPACE_ID>);
       OpenSocialField f = p.getField("thumbnailUrl");
       System.out.println(f.getStringValue());
 
-      Collection<OpenSocialPerson> friends = c.fetchFriends("01495306580392390900");
+      Collection<OpenSocialPerson> friends = c.fetchFriends(<YOUR_MYSPACE_ID>);
       for (OpenSocialPerson friend : friends) {
         System.out.println(friend.getDisplayName());
       }
-
-      OpenSocialObject o = c.fetchPersonAppData("01495306580392390900", "291092957065");
-      System.out.println(o.getField("test").getStringValue());
 
     } catch (Exception e) {
 
