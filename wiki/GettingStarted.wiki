@@ -3,6 +3,9 @@
 
 = Getting started with the Java Client Library =
 
+== Client library samples ==
+For more thorough (and commented) samples, please see the [http://code.google.com/p/opensocial-java-client/source/browse/#svn/trunk/java/samples set of samples] included with the library source. The included README-samples.txt file indicates how to build and run the samples from the command line.
+
 == List of endpoints you can use to test the library ==
   * http://sandbox.orkut.com/social/rest/
   * http://sandbox.orkut.com/social/rpc/
@@ -47,22 +50,3 @@ public class Main {
 }
 
 }}}
-
-== Note about orkut security tokens ==
-In the not-too-distant future, orkut will provide a page that will allow developers to register a secret key that this client library will use to sign requests in accordance with the OAuth specification. Until then, developers have to pass in a security token "borrowed" from a gadget-based app.
-
-Getting the security token is a straightforward if tedious process, and you can do it in one of two ways:
-
-If you use Firefox and have Firebug installed:
-  # Open the OpenSocial Dev App (if you haven't already, install it at [http://www.orkut.com/Main#Application.aspx?appId=291092957065 http://www.orkut.com/Main#Application.aspx?appId=291092957065])
-  # Refresh the canvas view and open Firebug's Console window.
-  # Click on the bottommost POST request in the list of requests.
-  # Navigate to the Params tab in the view that appears.
-  # Copy the value displayed next to *st*.
-
-If you don't have Firefox or don't have Firebug installed:
-  # Open any application's canvas view. The OpenSocial Dev App is a good choice but any app is fine.
-  # Open the application's IFrame in a new tab/window. In Firefox, just right-click anywhere in the app and choose This Frame -> Open Frame in New Tab.
-  # In the new window/tab that opens, copy the value of the *st* parameter in the address bar.
-
-orkut security tokens expire every 60 minutes, so you will have to go through this process several times if you want to developer over several hours. This sample will be updated when the secret key form is available.
