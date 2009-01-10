@@ -7,6 +7,9 @@
 For more thorough (and commented) samples, please see the [http://code.google.com/p/opensocial-java-client/source/browse/#svn/trunk/java/samples set of samples] included with the library source. The included README-samples.txt file indicates how to build and run the samples from the command line.
 
 == List of endpoints you can use to test the library ==
-  * http://sandbox.orkut.com/social/rest/
-  * http://sandbox.orkut.com/social/rpc/
+  * http://www.orkut.com/social/rest/
+  * http://w.orkut.com/social/rpc/
   * http://api.myspace.com/v2/
+
+== Troubleshooting ==
+If you have any problems using this client library, please post in the [http://groups.google.com/group/opensocial-client-libraries OpenSocial client libraries discussion forum].
