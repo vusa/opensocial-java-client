@@ -8,7 +8,7 @@ For more thorough (and commented) samples, please see the [http://code.google.co
 
 == List of endpoints you can use to test the library ==
   * http://www.orkut.com/social/rest/
-  * http://w.orkut.com/social/rpc/
+  * http://www.orkut.com/social/rpc/
   * http://api.myspace.com/v2/
 
 == Troubleshooting ==
