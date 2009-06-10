@@ -1,15 +1,40 @@
-#summary Introduction to the Java Client Library
+#summary Downloading and installing the Java client library.
 #labels Featured
+#sidebar TableOfContents
 
-= Getting started with the Java Client Library =
+This client library helps you work with social network data from your web server. This document will help explain where you can obtain the files for the client library and how to use them in your own projects.
 
-== Client library samples ==
-For more thorough (and commented) samples, please see the [http://code.google.com/p/opensocial-java-client/source/browse/#svn/trunk/java/samples set of samples] included with the library source. The included README-samples.txt file indicates how to build and run the samples from the command line.
+<wiki:toc />
 
-== List of endpoints you can use to test the library ==
-  * http://www.orkut.com/social/rest/
-  * http://www.orkut.com/social/rpc/
-  * http://api.myspace.com/v2/
+= Obtaining the client library =
 
-== Troubleshooting ==
-If you have any problems using this client library, please post in the [http://groups.google.com/group/opensocial-client-libraries OpenSocial client libraries discussion forum].
+There are two options for obtaining the files for the client library.  
+
+==Obtaining the pre-packaged release==
+Most developers will want to use the pre-packaged release, which is released according to the project roadmap and will be the most stable version of the library.
+
+Click on the [http://code.google.com/p/opensocial-java-client/downloads/list Downloads tab] to download the library. There are two downloads listed; the first is a zipped archive of the entire project including dependencies, documentation, unit tests, and samples. The second download is a Java Archive of the standalone library, which is useful when you already have the dependencies on your system. For reference, the Java client library depends on [http://opensocial-java-client.googlecode.com/svn/trunk/java/lib/json.jar json.jar], [http://opensocial-java-client.googlecode.com/svn/trunk/java/lib/commons-codec-1.3.jar commons-codec-1.3.jar], and [http://opensocial-java-client.googlecode.com/svn/trunk/java/lib/oauth-core-20090105.jar oauth-core-20090105.jar].
+
+After extracting the library from the zipped archive, you will have a new `opensocial-java-client` directory. The source files for the library can be found in `opensocial-java-client/java/src`.
+
+==Obtaining the most up-to-date version from SVN==
+The most up-to-date version of the code is available from this project's SVN repository. Obtaining the code this way is intended for developers looking for fixes or features that have not been released in the pre-packaged version or for developers who want to contribute patches back to the project.
+
+Obtain the code by using the following SVN checkout command (you will need an SVN client installed on your computer):
+{{{
+  svn checkout http://opensocial-java-client.googlecode.com/svn/trunk/ opensocial-java-client
+}}}
+
+= What to do with the files =
+
+If you downloaded the Java Archive earlier, you won't have to worry about building the library yourself. All you need to do is add `opensocial.jar` and the dependencies mentioned above to your Classpath (or your Web application's lib directory), and you're set. If you downloaded the zipped archive, you will need to build the library first before you can use it. Fortunately, this is very easy -- just follow the instructions in the included [http://code.google.com/p/opensocial-java-client/source/browse/trunk/README-src.txt README-src.txt] file. The archive will be generated in the `dist` directory which you can then copy (along with the dependencies in lib) to your project.
+
+To be able to use the various classes included with the client library, you will need to add the library to your Classpath. To do this for the included command-line samples, you can either set the system-wide Classpath using the instructions in [http://code.google.com/p/opensocial-java-client/source/browse/trunk/java/samples/README-samples.txt README-samples.txt] or specify the dependent libraries via the `-classpath` option of the `java` executable. 
+
+If you're instead planning to integrate these libraries into a Java-based Web application, you can place these libraries in your project's `war/WEB-INF/lib directory`. The Java application server typically takes care to add any Java Archives in this directory to your class path automatically. Your application server may also have a directory setup for sharing dependencies across projects, which saves you the trouble of constantly re-copying these JARs every time you create a new OpenSocial project. 
+
+Once your Classpath is set (and you've restarted your application server if applicable), you're all ready to use the library! The Java library is composed of various classes, which you have to import into your own classes/servlets. For example, to create new `OpenSocialClient` instances, import the class:
+
+{{{
+  import org.opensocial.client.OpenSocialClient;
+}}}
