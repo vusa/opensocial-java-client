@@ -42,12 +42,12 @@ The following specific steps for this tutorial will covered:</p>
 
 </ol>
 <p><strong>Using the !OpenSocial Java client library in Java applications </strong></p>
-<p>As you noticed, we stepped through how to build the core opensocial.jar file, but in order for this code to work correctly, it will also need several other jar files present in the classpath. Fortunately these files are also provided for you in a separate 'lib' directory. They are: commons-codec.jar, javax.servlet[...].jar, json.jar, junit[...].jar and oauth-core[...].jar. </p>
+<p>As you noticed, we stepped through how to build the core opensocial.jar file, but in order for this code to work correctly, it will also need several other jar files present in the classpath. Fortunately these files are also provided for you in a separate 'lib' directory. They are: commons-codec.jar, !javax.servlet[...].jar, json.jar, !junit[...].jar and !oauth-core[...].jar. </p>
 <p>When you wish to use these to enable your Java application to use the !OpenSocial client code, you'll need to make sure that both the core opensocial.jar file as well as the dependent jar files (commons, javax.servlet, json, etc) are also in the classpath. </p>
 <h4><a name="building" id="building"></a>Building a simple JSP based web app to securely fetch online social data</h4>
 <p>To enable  a Java EE Web application to be able to be an !OpenSocial client, you simply have to place both the opensocial.jar file along with the other required jar files into the webapp's WEB-INF/lib directory. Once added, you can immediately begin using the !OpenSocial client code in your Web applications. </p>
 <p><strong>A note on the opensocial-java-client/samples </strong></p>
-<p>Before jumping into creating a Java EE !Webapp  that uses the !OpenSocial client library, you may have noticed that there are already a set of samples provided by the OpenSocial Java client library. These are located in the directory, opensocial-java-client/java/samples. These are mostly straight Java examples of how to use the client library but there are some JSP examples which demonstrate how to connect to an !OpenSocial container(server) using 3-legged OAuth specifically. If you're just getting started however, using 2-legged OAuth is easy enough to use. For this tutorial, we'll start by converting over the simple DisplayFriends.java example into a simple Web app version.</p>
+<p>Before jumping into creating a Java EE !Webapp  that uses the !OpenSocial client library, you may have noticed that there are already a set of samples provided by the OpenSocial Java client library. These are located in the directory, opensocial-java-client/java/samples. These are mostly straight Java examples of how to use the client library but there are some JSP examples which demonstrate how to connect to an !OpenSocial container(server) using 3-legged OAuth specifically. If you're just getting started however, using 2-legged OAuth is easy enough to use. For this tutorial, we'll start by converting over the simple !DisplayFriends.java example into a simple Web app version.</p>
 <p><strong>Preparation building your first Java !WebApp </strong></p>
 
 <p>This tutorial makes use of a Java !WebApp running on a &quot;JSP/Servlet container&quot;. For this tutorial, <a href="http://tomcat.apache.org/" target="new">Apache Tomcat</a> is used, but other Java containers such as Glassfish, and Weblogic should work. If you already have experience building Java EE Web apps, you can easily skip ahead.</p>
@@ -63,8 +63,8 @@ The following specific steps for this tutorial will covered:</p>
  </web-app>
 }}}
 
-<p><strong>Adding the opensocial jar files to your webapp </strong></p>
-<p>Now that you've added the required web.xml file, you'll need to add the OpenSocial Java client jar files to the webapp. This is done by creating a subdirectory, &quot;lib&quot;, under the WEB-INF directory. Once you have added your lib directory under your WEB-INF directory, you can then copy the necessary OpenSocial and required complementary jar files:</p>
+<p><strong>Adding the !OpenSocial jar files to your webapp </strong></p>
+<p>Now that you've added the required web.xml file, you'll need to add the !OpenSocial Java client jar files to the webapp. This is done by creating a subdirectory, 'lib', under the WEB-INF directory. Once you have added your lib directory under your WEB-INF directory, you can then copy the necessary OpenSocial and required complementary jar files:</p>
 <ul>
   <li>opensocial.jar</li>
   <li>oauth-core-20090105.jar</li>
