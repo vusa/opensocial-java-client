@@ -16,9 +16,9 @@ The following specific steps for this tutorial will covered:</p>
 </ul>
 
 <h4><strong><a name="intro" id="intro"></a>An Introduction to the  !OpenSocial RESTful Client Libraries </strong></h4>
-<p>As of OpenSocial version 0.8, it contained the RESTful specification which for the first time allowed for direct communication with a website serving as an !OpenSocial container. As a result, the definition of an !OpenSocial application has evolved past its original gadget based history. To that end, an !OpenSocial application can now be constructed via a collection of technologies and in a variety of programming languages. The apps no longer have to be confined within the traditional browsers as desktop or mobile applications can also interact with social data in the same way as gadgets can do with the !OpenSocial JavaScript api. </p>
-<p>With OpenSocial's public RESTful specification, any programmer can write code that adheres to the spec in order to communicate as a client with an OpenSocial container. As of December 2008, a set OpenSocial REST client libraries were launched on Google's project hosting site and greatly simplifies the task. In addition to Java, they also come in several other languages including  PHP, Ruby, and Python. There is even an Objective-C library for iPhone developers. </p>
-<p>The different OpenSocial client libraries are accessible from the following locations:</p>
+<p>As of !OpenSocial version 0.8, it contained the RESTful specification which for the first time allowed for direct communication with a website serving as an !OpenSocial container. As a result, the definition of an !OpenSocial application has evolved past its original gadget based history. To that end, an !OpenSocial application can now be constructed via a collection of technologies and in a variety of programming languages. The apps no longer have to be confined within the traditional browsers as desktop or mobile applications can also interact with social data in the same way as gadgets can do with the !OpenSocial !JavaScript api. </p>
+<p>With !OpenSocial's public RESTful specification, any programmer can write code that adheres to the spec in order to communicate as a client with an !OpenSocial container. As of December 2008, a set !OpenSocial REST client libraries were launched on Google's project hosting site and greatly simplifies the task. In addition to Java, they also come in several other languages including  PHP, Ruby, and Python. There is even an Objective-C library for iPhone developers. </p>
+<p>The different !OpenSocial client libraries are accessible from the following locations:</p>
 <ul>
   <li><a href="http://code.google.com/p/opensocial-java-client/" target="new">http://code.google.com/p/opensocial-java-client/</a></li>
   <li><a href="http://code.google.com/p/opensocial-python-client/" target="new">http://code.google.com/p/opensocial-python-client/</a></li>
@@ -27,10 +27,10 @@ The following specific steps for this tutorial will covered:</p>
   <li><a href="http://code.google.com/p/opensocial-php-client/" target="new">http://code.google.com/p/opensocial-php-client/</a> </li>
   <li><a href="http://code.google.com/p/opensocial-objc-client/" target="new">http://code.google.com/p/opensocial-objc-client/</a></li>
 </ul>
-<h4><strong><a name="gettingfamiliar" id="gettingfamiliar"></a>Getting familiar with the OpenSocial Java Client Library</strong></h4>
-<p>In order to accomplish this tutorial, you'll first need to familiarize yourself with the OpenSocial Java client library. As mentioned ealier, it is possible to write your own client code to interact with an OpenSocial server as long as it adheres to the OpenSocial RESTful specification, however the published client libraries are open source and freely available so you can easily make use of these.</p>
+<h4><strong><a name="gettingfamiliar" id="gettingfamiliar"></a>Getting familiar with the !OpenSocial Java Client Library</strong></h4>
+<p>In order to accomplish this tutorial, you'll first need to familiarize yourself with the !OpenSocial Java client library. As mentioned ealier, it is possible to write your own client code to interact with an !OpenSocial server as long as it adheres to the !OpenSocial RESTful specification, however the published client libraries are open source and freely available so you can easily make use of these.</p>
 <p><strong>Downloading and building the Java Client library</strong></p>
-<p>Before integrating OpenSocial data via REST, the first task you'll want to do is download and build your own jar files for OpenSocial Java client library. This is done by:</p>
+<p>Before integrating !OpenSocial data via REST, the first task you'll want to do is download and build your own jar files for !OpenSocial Java client library. This is done by:</p>
 <ol>
 
   <li>Get the code by navigating to: <a href="http://code.google.com/p/opensocial-java-client/source/checkout" target="new">http://code.google.com/p/opensocial-java-client/source/checkout</a>
@@ -38,20 +38,20 @@ The following specific steps for this tutorial will covered:</p>
       <li>Incidentally you'll notice that there is a downloadable zip file  available on the site, but this may not contain the latest changes to the client library, so checking out the code with a subversion client is recommended.</li>
     </ul>
   </li>
-  <li>Once you have the OpenSocial java client library source code, you should be able to build the code by following the instructions in the opensocial-java-client/README-src.txt file.  You'll need to execute the command: 'ant dist'. This will build all of the OpenSocial class files and place the OpenSocial client jar file (opensocial.jar) into a new directory named 'dist'. </li>
+  <li>Once you have the !OpenSocial java client library source code, you should be able to build the code by following the instructions in the opensocial-java-client/README-src.txt file.  You'll need to execute the command: 'ant dist'. This will build all of the !OpenSocial class files and place the !OpenSocial client jar file (opensocial.jar) into a new directory named 'dist'. </li>
 
 </ol>
-<p><strong>Using the OpenSocial Java client library in Java applications </strong></p>
+<p><strong>Using the !OpenSocial Java client library in Java applications </strong></p>
 <p>As you noticed, we stepped through how to build the core opensocial.jar file, but in order for this code to work correctly, it will also need several other jar files present in the classpath. Fortunately these files are also provided for you in a separate 'lib' directory. They are: commons-codec.jar, javax.servlet[...].jar, json.jar, junit[...].jar and oauth-core[...].jar. </p>
-<p>When you wish to use these to enable your Java application to use the OpenSocial client code, you'll need to make sure that both the core opensocial.jar file as well as the dependent jar files (commons, javax.servlet, json, etc) are also in the classpath. </p>
+<p>When you wish to use these to enable your Java application to use the !OpenSocial client code, you'll need to make sure that both the core opensocial.jar file as well as the dependent jar files (commons, javax.servlet, json, etc) are also in the classpath. </p>
 <h4><a name="building" id="building"></a>Building a simple JSP based web app to securely fetch online social data</h4>
-<p>To enable  a Java EE Web application to be able to be an OpenSocial client, you simply have to place both the opensocial.jar file along with the other required jar files into the webapp's WEB-INF/lib directory. Once added, you can immediately begin using the OpenSocial client code in your Web applications. </p>
+<p>To enable  a Java EE Web application to be able to be an !OpenSocial client, you simply have to place both the opensocial.jar file along with the other required jar files into the webapp's WEB-INF/lib directory. Once added, you can immediately begin using the !OpenSocial client code in your Web applications. </p>
 <p><strong>A note on the opensocial-java-client/samples </strong></p>
-<p>Before jumping into creating a Java EE Webapp  that uses the OpenSocial client library, you may have noticed that there are already a set of samples provided by the OpenSocial Java client library. These are located in the directory, opensocial-java-client/java/samples. These are mostly straight Java examples of how to use the client library but there are some JSP examples which demonstrate how to connect to an OpenSocial container(server) using 3-legged OAuth specifically. If you're just getting started however, using 2-legged OAuth is easy enough to use. For this tutorial, we'll start by converting over the simple DisplayFriends.java example into a simple Web app version.</p>
-<p><strong>Preparation building your first Java WebApp </strong></p>
+<p>Before jumping into creating a Java EE !Webapp  that uses the !OpenSocial client library, you may have noticed that there are already a set of samples provided by the OpenSocial Java client library. These are located in the directory, opensocial-java-client/java/samples. These are mostly straight Java examples of how to use the client library but there are some JSP examples which demonstrate how to connect to an !OpenSocial container(server) using 3-legged OAuth specifically. If you're just getting started however, using 2-legged OAuth is easy enough to use. For this tutorial, we'll start by converting over the simple DisplayFriends.java example into a simple Web app version.</p>
+<p><strong>Preparation building your first Java !WebApp </strong></p>
 
-<p>This tutorial makes use of a Java WebApp running on a &quot;JSP/Servlet container&quot;. For this tutorial, <a href="http://tomcat.apache.org/" target="new">Apache Tomcat</a> is used, but other Java containers such as Glassfish, and Weblogic should work. If you already have experience building Java EE Web apps, you can easily skip ahead.</p>
-<p>Building a Java Webapp usually requires at least 2 files in a defined directory structure. For this example, we'll assume you are building a webapp for the Tomcat server. </p>
+<p>This tutorial makes use of a Java !WebApp running on a &quot;JSP/Servlet container&quot;. For this tutorial, <a href="http://tomcat.apache.org/" target="new">Apache Tomcat</a> is used, but other Java containers such as Glassfish, and Weblogic should work. If you already have experience building Java EE Web apps, you can easily skip ahead.</p>
+<p>Building a Java !Webapp usually requires at least 2 files in a defined directory structure. For this example, we'll assume you are building a webapp for the Tomcat server. </p>
 <p>Starting in the &lt;tomcat_home/webapps directory of Tomcat, create a subdirectory, 'twolegged'. This directory will contain your new application. </p>
 <p>Now cd into the this directory and create a subdirectory, 'WEB-INF'. </p>
 <p>Change into this new directory and create a file named web.xml and place the following content into it.</p>
