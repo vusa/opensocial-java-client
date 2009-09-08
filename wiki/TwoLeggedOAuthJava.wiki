@@ -153,9 +153,10 @@ The following specific steps for this tutorial will covered:</p>
 
 <p>You should now be able to refresh the JSP page in the browser and see the profile information (displayName, Id, and thumbnailUrl) rendered in the HTML table.<br />
   <br />
-Note: Recall again that we've literally taken the same example code along with its sample viewerid and OAuth application consumer key and secret for the OpenSocial Java client library examples: DisplayProfileData.java, and DisplayFriends.java. (This is why we are seeing the profile information for 'API DWH'.) </p>
-<p><strong>Displaying OpenSocial Friends data in a JSP </strong></p>
-<p>You may have noticed already in the code that was added to the JSP also fetched the viewer's friends and placed it in a Collection object named 'friends' of type OpenSocialPerson. Now we simply have to add the necessary code the JSP page to display the fetched friend data.</p>
+Note: Recall again that we've literally taken the same example code along with its sample viewerid and OAuth application consumer key and secret for the !OpenSocial Java client library examples: !DisplayProfileData.java, and !DisplayFriends.java. (This is why we are seeing the profile information for 'API DWH'.) </p>
+
+<p><strong>Displaying !OpenSocial Friends data in a JSP </strong></p>
+<p>You may have noticed already in the code that was added to the JSP also fetched the viewer's friends and placed it in a Collection object named 'friends' of type !OpenSocialPerson. Now we simply have to add the necessary code the JSP page to display the fetched friend data.</p>
 <p>Add the following code your JSP page directly after the line: < h3 > Your Friends are:< /h3 ></p>
 
 {{{
