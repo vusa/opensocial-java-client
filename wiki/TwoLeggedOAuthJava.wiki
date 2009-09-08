@@ -9,10 +9,10 @@
 The following specific steps for this tutorial will covered:</p>
 
 <ul>
-  <li><a href="#intro">An Introduction to the OpenSocial RESTful Client Libraries</a> </li>
-  <li><a href="#gettingfamiliar">Getting familiar with the OpenSocial Java client library</a> </li>
+  <li><a href="#intro">An Introduction to the !OpenSocial RESTful Client Libraries</a> </li>
+  <li><a href="#gettingfamiliar">Getting familiar with the !OpenSocial Java client library</a> </li>
   <li><a href="#building">Building a simple JSP based web app to securely fetch online social data</a></li>
-  <li><a href="#customize">How to customize the JSP app to fetch your own orkut data</a> </li>
+  <li><a href="#customize">How to customize the !JSP app to fetch your own !orkut data</a> </li>
 </ul>
 
 <h4><strong><a name="intro" id="intro"></a>An Introduction to the  OpenSocial RESTful Client Libraries </strong></h4>
