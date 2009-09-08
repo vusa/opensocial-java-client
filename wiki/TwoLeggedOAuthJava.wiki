@@ -129,11 +129,11 @@ The following specific steps for this tutorial will covered:</p>
 ...
 }}}
 
-<p>As you can  see in the code, we first import the required Java packages for making !OpenSocial client calls. We then set the OAuth consumer key and consumer secret as well as the !OpenSocial viewerid and the provider, which for this example is orkut. The final segment of code, creates a new OpenSocialClient based on the provider value (which we specified as orkut) and then sets the client properties for the OAuth parameters as well as the OpenSocial viewerid.</p>
-<p>You'll also notice that we set the client property DEBUG, to 'true'. This is an extremely useful option that allows you to see the actual communication stream between the client and the OpenSocial container. </p>
+<p>As you can  see in the code, we first import the required Java packages for making !OpenSocial client calls. We then set the OAuth consumer key and consumer secret as well as the !OpenSocial viewerid and the provider, which for this example is orkut. The final segment of code, creates a new !OpenSocialClient based on the provider value (which we specified as orkut) and then sets the client properties for the OAuth parameters as well as the !OpenSocial viewerid.</p>
+<p>You'll also notice that we set the client property DEBUG, to 'true'. This is an extremely useful option that allows you to see the actual communication stream between the client and the !OpenSocial container. </p>
 
-<p>Once all the client properties are set, two calls are made to the OpenSocial container. The first is to fetch the profile information of the person specified by viewerId and the second call is to fetch a collection of friends associated with the same person associated with the specified viewerId. Once these calls are successfully made, their responses are stored in the Java objects: person, and friends and can be displayed in the body of the JSP.</p>
-<p><strong>Displaying OpenSocial Profile Data in a JSP </strong></p>
+<p>Once all the client properties are set, two calls are made to the !OpenSocial container. The first is to fetch the profile information of the person specified by viewerId and the second call is to fetch a collection of friends associated with the same person associated with the specified viewerId. Once these calls are successfully made, their responses are stored in the Java objects: person, and friends and can be displayed in the body of the JSP.</p>
+<p><strong>Displaying !OpenSocial Profile Data in a JSP </strong></p>
 <p>To display the fetched profile information from the fetchPerson call, add the following code to the JSP page directly after the < h3 > Profile Information < /h3 > line:</p>
 {{{
 <h3>Profile Information</h3>
