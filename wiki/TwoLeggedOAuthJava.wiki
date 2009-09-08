@@ -247,9 +247,9 @@ Collection<OpenSocialPerson> friends =  client.fetchFriends(viewerId);
 
 
 <h4><a name="customize" id="customize"></a>How to customize the JSP app to fetch your own data</h4>
-<p>The next logical step for this tutorial is to show you how to access your own list of friends from orkut, or other OpenSocial containers that support the RESTful protocol. Let's start by reviewing the steps needed which will allow you to access orkut with your own viewerId and your own friends. </p>
+<p>The next logical step for this tutorial is to show you how to access your own list of friends from orkut, or other !OpenSocial containers that support the RESTful protocol. Let's start by reviewing the steps needed which will allow you to access orkut with your own viewerId and your own friends. </p>
 <p>In order to list your own friends, you'll recall that you need an OAuth consumer key and consumer secret, in addition to your own viewerId from orkut. </p>
-<p>To retrieve an OAuth consumer key and secret, you will have had to install an application on orkut, and once successfully installed, you can then retrieve the consumer key and secret. Incidentally each OpenSocial container has their own way of providing access to a consumer key and secret, but for the sake of this tutorial, we'll quickly review how to go about retrieving them for use with orkut.</p>
+<p>To retrieve an OAuth consumer key and secret, you will have had to install an application on orkut, and once successfully installed, you can then retrieve the consumer key and secret. Incidentally each !OpenSocial container has their own way of providing access to a consumer key and secret, but for the sake of this tutorial, we'll quickly review how to go about retrieving them for use with orkut.</p>
 <p><strong>Step 1. Install your own gadget application on orkut.  </strong></p>
 <p>One of the key concepts behind 2-legged OAuth is that you are establishing that you are allowing a trusted set of users access content associated with a specific application. To that end, you will have to install an application on orkut and have it verified that it is yours. Once verified, you will then be able to generate an OAuth consumer key and secret, which can then be added to your server-side application (such as a JSP webapp) so that it can then access social data. </p>
 
