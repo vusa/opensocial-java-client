@@ -264,7 +264,7 @@ Collection<OpenSocialPerson> friends =  client.fetchFriends(viewerId);
 <p>Incidentally this tool will verify gadgets running on multiple Google related sites such as GMail and iGoogle in addition to orkut.</p>
 
 <p><strong>Step 3: Edit your server-side code to add the new OAuth parameters and your own viewerId. </strong></p>
-<p>After changing the consumer key and secret to your new values, you'll need to change the viewerId property to the id associated with your own user id on orkut. If you've used the example gadget mentioned above, you can simply look at the viewerId rendered in the gadget. Otherwise you can build your own gadget to obtain the viewerId using the !OpenSocial JavaScript call <a href="http://wiki.opensocial.org/index.php?title=Opensocial.Person_%28v0.8%29#opensocial.Person.getId" target="new">getId( )</a>. </p>
+<p>After changing the consumer key and secret to your new values, you'll need to change the viewerId property to the id associated with your own user id on orkut. If you've used the example gadget mentioned above, you can simply look at the viewerId rendered in the gadget. Otherwise you can build your own gadget to obtain the viewerId using the !OpenSocial !JavaScript call <a href="http://wiki.opensocial.org/index.php?title=Opensocial.Person_%28v0.8%29#opensocial.Person.getId" target="new">getId( )</a>. </p>
 <p>Once you make these changes, you should be able to refresh the JSP page and see both your own profile data associated with your account, as well as a listing of your friends. </p>
 
 == Summary ==
