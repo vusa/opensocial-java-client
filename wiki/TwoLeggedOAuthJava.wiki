@@ -1,7 +1,7 @@
 #summary This tutorial describe how to use Two-Legged OAuth in web apps using the OpenSocial Java client libraries
 #labels OAuth,OpenSocial,orkut,2-legged
 
-= Using Two-legged OAuth  with Java based WebApps  =
+= Using Two-legged OAuth  with Java based Web Apps  =
 
 == Overview ==
 <p>Seamless integration of  online social  data can greatly improve the overall richness and functionality of the site. With OpenSocial's RESTful protocol, it is now possible to easily integrate social data into existing websites using simple api calls through entirely secure means. This tutorial will step through how to fetch social data from an OpenSocial container site using the OpenSocial Java client library where '2-Legged'  OAuth is used to secure the transaction. 
