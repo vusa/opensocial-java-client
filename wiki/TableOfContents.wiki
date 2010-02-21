@@ -2,6 +2,7 @@
 == Documentation ==
   * [GettingStarted Getting Started]
   * [HowToConnecting Connecting to a container]
+  * [HowToSocialCalls Making social calls]
 
 
 If you'd like to see more examples or want more information about how to use the library, please file a feature request in [http://code.google.com/p/opensocial-java-client/issues/list our issue tracker] explaining what you'd like to see.
