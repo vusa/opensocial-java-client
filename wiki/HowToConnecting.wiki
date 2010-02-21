@@ -46,7 +46,7 @@ provider.setRestEndpoint("http://api.example.com/");
 The parameters needed are:
 
 ||name|| `String` || A name identifying this provider. ||
-||version|| `String` || The latest OpenSocial version supported by the container; defaults to "0.8". ||
+||version|| `String` || The latest !OpenSocial version supported by the container; defaults to "0.8". ||
 ||rpcEndpoint|| `String` || The base URL of the container's !OpenSocial RPC protocol implementation. ||
 ||restEndpoint|| `String` || The base URL of the container's !OpenSocial REST protocol implementation. ||
 ||requestTokenUrl|| `String` || The OAuth URL used to obtain an unauthorized Request Token. ||
@@ -135,4 +135,4 @@ Client client = new Client(provider, scheme);
 }}}
 
 == 3-legged OAuth on iGoogle ==
-See the included App Engine-based demo application called ThirdEye (in `java/demos`) which includes a `Filter` that demonstrates how to do the 3-legged OAuth dance using this library.
+See the included App Engine-based demo application called !ThirdEye (in `java/demos`) which includes a `Filter` that demonstrates how to do the 3-legged OAuth dance using this library.
