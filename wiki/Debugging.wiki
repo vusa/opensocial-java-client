@@ -5,7 +5,7 @@ This document discusses several troubleshooting options available if you run int
 
 <wiki:toc />
 
-= Enabling debug output =
+= Enable debug output =
 
 This project uses the `java.util.Logging` framework to log all requests and responses. Specifically, the HTTP method and complete request URL and payload (if any) are logged at the FINEST level for every request along with the status code (e.g. 200, 400) and raw JSON returned. This output can be very helpful when debugging a particular issue.
 
@@ -21,7 +21,7 @@ Make sure to substitute the path of your logging.properties file with respect to
 
 For other execution environments such as Tomcat, please read the appropriate documentation to determine how to specify the location of your logging.properties file.
 
-= Check the unit tests =
+= Run the included online tests =
 
 A number of unit tests are available for each of the various services in `java/test`. The online tests which execute live requests against actual containers are located in the `org.opensocial.online` package. You can view the source of each test to understand how the requests are set up, then run the tests to see how the various requests are executed. Make sure to enable logging output as described above to see the responses.
 
@@ -29,7 +29,7 @@ A number of unit tests are available for each of the various services in `java/t
 
 Not all containers support every !OpenSocial REST/RPC operation. For example, orkut doesn't allow activities to be posted via the server-to-server protocols, and !MySpace doesn't support !AppData at all. If you're seeing an odd response and the debug output doesn't help, look up any developer resources that your container has available to make sure that the operation you're trying to do is supported and, if it is, that you're passing all required parameters.
 
-For links to a number of OpenSocial developer resources, check out [http://wiki.opensocial.org/index.php?title=Main_Page wiki.opensocial.org].
+For links to a number of !OpenSocial developer resources, check out [http://wiki.opensocial.org/index.php?title=Main_Page wiki.opensocial.org].
 
 = Post in the discussion group =
 
