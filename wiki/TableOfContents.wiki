@@ -5,6 +5,7 @@
   * [HowToSocialCalls Making social calls]
     * [HowToPeople People]
     * [HowToActivities Activities]
+  * [Debugging Debugging]
   * [BecomingAContributor Contributing]
 
 
